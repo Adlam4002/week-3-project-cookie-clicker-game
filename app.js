@@ -78,12 +78,13 @@ function saveLocalStorage() {
 }
 let loadedCookies = localStorage.getItem("cookieCounter");
 let loadedCPS = localStorage.getItem("cps");
-let parsedCookies = JSON.parse(loadedCookies);
-let parsedCPS = JSON.parse(loadedCPS);
+
 let loadedItems = localStorage.getItem("shopItems");
-let parsedItems = JSON.parse(loadedItems);
 
 function loadPrevious() {
+  let parsedCookies = JSON.parse(loadedCookies);
+  let parsedCPS = JSON.parse(loadedCPS);
+  let parsedItems = JSON.parse(loadedItems);
   if (localStorage.getItem("cookieCounter")) {
     cookieCounter = parsedCookies;
   }
