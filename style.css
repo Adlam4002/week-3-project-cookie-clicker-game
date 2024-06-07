@@ -67,6 +67,17 @@ main {
   font-size: 3rem;
   text-decoration: underline;
 }
+header {
+  width: 98vw;
+  display: flex;
+  justify-content: center;
+}
+#main-title {
+  font-family: "Brush Script MT", cursive;
+  color: Teal;
+  font-size: 2rem;
+  text-decoration: underline;
+}
 h1,
 h2,
 h3 {
