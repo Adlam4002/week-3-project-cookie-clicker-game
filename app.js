@@ -1,18 +1,8 @@
 console.log("Hello world!");
 let cookieCounter = 1;
 let cps = 1;
-
-// need dom manipulation
-// need a cookie count
-// need to see cps
-// need cookie picture to click on
-// select or these items from the dom or create them with JS
 let shopItems = [];
-// need a way to store the shop item that we get from the API
-// fetch the items from the API async and await
-//fetch the shop items from API
-//turn the data into json, use .json()
-//put the items in the shop items array
+
 async function getShopItems() {
   let response = await fetch(
     "https://cookie-upgrade-api.vercel.app/api/upgrades"
@@ -55,7 +45,6 @@ let leftSec = document.querySelector("#sleft");
 cBut.addEventListener("click", () => {
   cookieCounter++;
   updateCookieDisplay();
-  //   console.log(cookieCounter);
 });
 setInterval(function () {
   cookieCounter += cps;
@@ -75,24 +64,7 @@ reset.addEventListener("click", () => {
   saveLocalStorage();
   updateCookieDisplay();
 });
-// ------------------------------------------add event lisntener to the cookie
-// ------------------------------------------select the cookie from the dom and then need to add even listner
-// ------------------------------------------when I click, the value of the cookieCounter goes up by 1
-// ------------------------------------------goog ethe increment operator (just one way of doing it)
 
-// need to have all the game information in one function
-
-// i need to check if there are any values stored in local storage  (need to atleast be storing cookieCounter and cps --> the version in local storage is more up to date.)
-// need to load the game to start the game could have a function, load(), that calls the game function
-// fetch the shop items
-// display the shop items on the page
-// we need a timer to increase our cookies each second --> setInterval two parameters  first is the function to add cps to the cookieCounter, second is the tiome interval in ms (1000ms)
-// i want to update the value displayed on the page --> for more control this couls be in a seperate dfunction that is called inside the interval, updateDisplay()
-// I want to update the value in local storage --> this couls also be a seperate function called within the interval, saveLocalStorage()
-
-// Extra tools if I want to use them to seperate different tasks into different functions. -->
-// need a method to turn the data into strings
-// need a method to set the items using key and value in local storage
 let localItems = JSON.stringify(shopItems);
 function saveLocalStorage() {
   localStorage.setItem("cookieCounter", cookieCounter);
@@ -119,9 +91,7 @@ function loadPrevious() {
 }
 loadPrevious();
 function renderShop() {
-  // Could create DOM elements to display shop items
   shopItems.forEach((item) => {
-    // item.purchase = 0;
     loadPrevious();
     if (item.purchase != 0) {
       purchasedBox = document.createElement("h2");
@@ -156,7 +126,6 @@ function renderShop() {
       saveLocalStorage();
       updateCookieDisplay();
     });
-    //loop through array and create the elements you want
   });
 }
 // renderShop();
