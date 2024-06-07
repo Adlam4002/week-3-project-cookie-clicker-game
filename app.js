@@ -60,7 +60,7 @@ reset.addEventListener("click", () => {
   cookieCounter = 0;
   cps = 1;
   shopItems.forEach((item) => {
-    // item.purchase = 0;
+    item.purchase = 0;
     let purchasedBox = document.querySelector(`#owned-item${item.id}`);
     if (purchasedBox) {
       purchasedBox.textContent = ` `;
