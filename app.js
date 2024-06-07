@@ -136,6 +136,7 @@ function renderShop() {
     shopDisplay.appendChild(itemBox);
     let itemButton = document.createElement("button");
     itemButton.textContent = "Buy";
+    itemButton.id = "shop-button";
     itemBox.appendChild(itemButton);
     itemButton.addEventListener("click", () => {
       if (cookieCounter >= item.cost) {

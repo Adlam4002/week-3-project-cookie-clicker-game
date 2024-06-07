@@ -1,6 +1,6 @@
-* {
+/* * {
   background-color: lightgreen;
-}
+} */
 body {
   height: 98vh;
   width: 98vw;
@@ -8,6 +8,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 5% 90% 5%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: lightgreen;
 }
 footer {
   grid-area: 3/1/4/2;
@@ -27,13 +28,50 @@ main {
   flex-direction: column;
   text-align: center;
 }
-
+#shop-button:hover {
+  box-shadow: 0 12px 16px 0 teal, 0 17px 50px 0 teal;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+#cookie-button:hover {
+  cursor: pointer;
+}
 #cookie-button {
-  height: 100px;
-  width: 100px;
+  border: none;
+  font-size: 10rem;
+  background-color: lightgreen;
+  height: 215px;
+}
+#cookie-button:active {
+  border: none;
+  height: 215px;
+  font-size: 9.5rem;
+  text-shadow: 2px 2px 4px teal;
+  transition-duration: 0.05s;
 }
 #sright {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+}
+#sleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shop-title {
+  font-family: "Brush Script MT", cursive;
+  color: Teal;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+h1,
+h2,
+h3 {
+  color: Teal;
+}
+div {
+  color: Teal;
 }
