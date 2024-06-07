@@ -9,8 +9,13 @@ async function getShopItems() {
   );
   let shopData = await response.json();
   console.log(shopData);
-  shopData.purchase = 0;
+  // shopData.purchase = 0;
+  shopData.forEach((item) => {
+    item.purchase = 0;
+  });
+
   shopItems = shopData;
+  console.log(shopItems);
   loadPrevious();
   renderShop();
 }
@@ -55,7 +60,7 @@ reset.addEventListener("click", () => {
   cookieCounter = 0;
   cps = 1;
   shopItems.forEach((item) => {
-    item.purchase = 0;
+    // item.purchase = 0;
     let purchasedBox = document.querySelector(`#owned-item${item.id}`);
     if (purchasedBox) {
       purchasedBox.textContent = ` `;
@@ -106,6 +111,7 @@ function renderShop() {
     itemButton.textContent = "Buy";
     itemButton.id = "shop-button";
     itemBox.appendChild(itemButton);
+    console.log(shopItems);
     itemButton.addEventListener("click", () => {
       if (cookieCounter >= item.cost) {
         cookieCounter -= item.cost;
