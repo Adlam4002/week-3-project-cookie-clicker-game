@@ -92,7 +92,6 @@ function loadPrevious() {
 loadPrevious();
 function renderShop() {
   shopItems.forEach((item) => {
-    loadPrevious();
     if (item.purchase != 0) {
       purchasedBox = document.createElement("h2");
       purchasedBox.textContent = `${item.name} owned: ${item.purchase}`;
