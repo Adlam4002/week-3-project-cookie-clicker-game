@@ -89,7 +89,6 @@ function loadPrevious() {
     shopItems = parsedItems;
   }
 }
-loadPrevious();
 function renderShop() {
   shopItems.forEach((item) => {
     if (item.purchase != 0) {
